@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Overcame';
+  src: url('/src/assets/fonts/OvercameDemoBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: 70px;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .brand-name {
+    cursor: pointer;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
+    font-weight: 700;
+    font-family: 'Overcame', sans-serif;
+    margin-top: -25px;
+    letter-spacing: 0.5px;
+    transition: all 0.1s ease-in;  
+  }
+  
+  .brand-name:hover {
+    color: var(--principal-color);
+    transform: scale(1.05);
+  }
+
+  .nav-link {
+    color: #666;
+    text-decoration: none;
+    margin: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+  } 
+
+  .active {
+    color: var(--principal-color);
+  }
+  
+  .nav-link:hover {
+    color: var(--principal-color);
+    
+  }
+
+  svg {
+    position: absolute;
+    top: .6vw;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  svg.home-circle {
+    left: var(--left-circle-hover);
+  }
+
+  svg.streams-circle {
+    left: calc(var(--left-circle-hover) + 4.5rem);
+  }
+
+  svg.party-circle {
+    left: calc(var(--left-circle-hover) + 9rem);
+  }
+
+  svg.premiun-circle {
+    left: calc(var(--left-circle-hover) + 13.3rem);
+  }
+
+  svg.signIn-circle {
+    right: calc(var(--left-circle-hover) + 10rem);
+  }
+
+  .draw-circle {
+    stroke: var(--principal-color);
+    stroke-width: 4;
+    fill: none;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset .4s ease-in;
+    transform: translateY(20px) rotateX(60deg) rotateY(-10deg);
+  }
+
+  .hover-effect:hover .draw-circle {
+    stroke-dashoffset: 0;
+  }
+
+  .create-account-btn {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  .create-account-btn:hover {
+    background-color: #333;
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .nav-link {
+      margin: 0 0.5rem;
+    }
+  
+    .navbar-center {
+      position: relative;
+      left: 0;
+      transform: none;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .navbar-left,
+    .navbar-right {
+      width: 100%;
+      justify-content: center;
+      margin: 0.5rem 0;
+    }
+  }
+  
