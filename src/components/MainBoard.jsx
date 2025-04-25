@@ -45,8 +45,18 @@ const MainBoard = () => {
             <button className="btn-create">Create account</button>
             <button className="btn-signin">Sign in</button>
           </div>
+          <div className="decorative-lines">
+            <svg width="250" height="250" viewBox="0 0 150 150">
+              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+            </svg>
+            <svg width="250" height="250" viewBox="0 0 150 150">
+              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+            </svg>
+            <svg width="250" height="250" viewBox="0 0 150 150">
+              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+            </svg>
+          </div>
         </div>
-        <div className="decorative-line"></div>
       </div>
 
       {/* Center Panel - Featured Game */}
