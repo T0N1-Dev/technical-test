@@ -9,8 +9,9 @@
 
 :root {
   --principal-color: #8a56ff;
-  --left-circle-hover: .7vw;
+  --principal-color-dark: #5e3bb0;
   --secondary-color: #ff6d38;
+  --left-circle-hover: .7vw;
 }
 
 *,

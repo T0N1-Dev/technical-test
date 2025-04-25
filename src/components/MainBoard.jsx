@@ -47,13 +47,13 @@ const MainBoard = () => {
           </div>
           <div className="decorative-lines">
             <svg width="250" height="250" viewBox="0 0 150 150">
-              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+              <circle className="circle-decorative-left" cx="70" cy="80" r="70"/>
             </svg>
             <svg width="250" height="250" viewBox="0 0 150 150">
-              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+              <circle className="circle-decorative-left" cx="70" cy="80" r="70"/>
             </svg>
             <svg width="250" height="250" viewBox="0 0 150 150">
-              <circle className="draw-circle-decorative" cx="70" cy="80" r="70"/>
+              <circle className="circle-decorative-left" cx="70" cy="80" r="70"/>
             </svg>
           </div>
         </div>
@@ -72,7 +72,17 @@ const MainBoard = () => {
           </div>
 
           <div className="character-container">
-            <div className="character-image"></div>
+            <div className="character-image">
+              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
+                Tu navegador no soporta videos HTML5.
+              </video>
+              <svg width="250" height="250" viewBox="0 0 150 150">
+                <circle className="circle-decorative-center" cx="70" cy="80" r="70"/>
+              </svg>
+              <svg width="250" height="250" viewBox="0 0 150 150">
+                <circle className="circle-decorative-center" cx="70" cy="80" r="70"/>
+              </svg>
+            </div>
             <div className="character-thumbnail left"></div>
             <div className="character-thumbnail right"></div>
           </div>

@@ -62,7 +62,7 @@
     
   }
 
-  svg {
+  .nav-link svg {
     position: absolute;
     top: .6vw;
     cursor: default;
