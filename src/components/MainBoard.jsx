@@ -1,30 +1,16 @@
 import { useState, useEffect } from "react"
+import {RoundButton} from "./RoundButton"
 import "../styles/MainBoard.css"
+import { Timer } from "./Timer"
 
 const MainBoard = () => {
-  const [timeLeft, setTimeLeft] = useState({ minutes: 11, seconds: 45 })
   const [selectedPlatform, setSelectedPlatform] = useState("Party")
 
-  // Countdown timer effect
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (timeLeft.seconds > 0) {
-        setTimeLeft((prev) => ({ ...prev, seconds: prev.seconds - 1 }))
-      } else if (timeLeft.minutes > 0) {
-        setTimeLeft({ minutes: timeLeft.minutes - 1, seconds: 59 })
-      } else {
-        clearInterval(timer)
-      }
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [timeLeft])
-
   const teams = [
-    { id: 1, name: "Dr Team", members: ["avatar1.png", "avatar2.png"] },
-    { id: 2, name: "Mia Plays", members: ["avatar3.png", "avatar4.png"] },
-    { id: 3, name: "Keoxer", members: ["avatar5.png", "avatar6.png"] },
-    { id: 4, name: "Nicknemo", members: ["avatar7.png", "avatar8.png"] },
+    { id: 1, name: "Dr Team", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_2.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_3.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_18.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_19.png"] },
+    { id: 2, name: "Mia Plays", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_4.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_5.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_21.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_24.png"] },
+    { id: 3, name: "Keoxer", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_7.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_9.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_23.png"] },
+    { id: 4, name: "Nicknemo", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_15.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_12.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"] },
   ]
 
   return (
@@ -65,27 +51,25 @@ const MainBoard = () => {
           <h2 className="featured-title">Fortnite New Season</h2>
           <p className="featured-subtitle">Join Live Stream</p>
 
-          <div className="countdown-timer">
-            <span>{String(timeLeft.minutes).padStart(2, "0")}</span>
-            <span className="separator">:</span>
-            <span>{String(timeLeft.seconds).padStart(2, "0")}</span>
-          </div>
+          <Timer />
 
           <div className="character-container">
             <div className="character-image">
               <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
                 Tu navegador no soporta videos HTML5.
               </video>
-              <svg width="250" height="250" viewBox="0 0 150 150">
-                <circle className="circle-decorative-center" cx="70" cy="80" r="70"/>
-              </svg>
-              <svg width="250" height="250" viewBox="0 0 150 150">
-                <circle className="circle-decorative-center" cx="70" cy="80" r="70"/>
-              </svg>
             </div>
-            <div className="character-thumbnail left"></div>
-            <div className="character-thumbnail right"></div>
+            <div className="character-thumbnail vector">
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
+            </div>
+            <div className="character-thumbnail jake">
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706298/pngfind.com-fortnite-skin-png-288383_xd60p9.png" alt="jake-img" />
+            </div>
+            <div className="character-thumbnail hug">
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745707867/pngimg.com_-_fortnite_PNG19_igb5sa.png" alt="hug-img" />
+            </div>
           </div>
+          <RoundButton />
         </div>
       </div>
 
@@ -101,19 +85,19 @@ const MainBoard = () => {
                 className={`platform-btn ${selectedPlatform === "Party" ? "active" : ""}`}
                 onClick={() => setSelectedPlatform("Party")}
               >
-                Party
+                🎉 Party
               </button>
               <button
                 className={`platform-btn ${selectedPlatform === "Matchs" ? "active" : ""}`}
                 onClick={() => setSelectedPlatform("Matchs")}
               >
-                Matchs
+                ⚔️ Matchs
               </button>
               <button
                 className={`platform-btn ${selectedPlatform === "Streams" ? "active" : ""}`}
                 onClick={() => setSelectedPlatform("Streams")}
               >
-                Streams
+                🎥 Streams
               </button>
             </div>
           </div>
@@ -135,7 +119,9 @@ const MainBoard = () => {
                     <span className="team-name">{team.name}</span>
                     <div className="team-avatars">
                       {team.members.map((avatar, index) => (
-                        <div key={index} className="team-avatar"></div>
+                        <div key={index} className="team-avatar" style={{ backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}` }}>
+                          <img src={`${avatar}`} alt={`avatar-${index}`} />
+                        </div>
                       ))}
                     </div>
                     <button className="add-btn">+</button>

@@ -208,33 +208,64 @@
     z-index: -1;
   }
 
-  .circle-decorative-center {
-    stroke: var(--principal-color-dark);
-    stroke-width: 1;
-    fill: none;
-    stroke-dasharray: 440;
-    animation: trace-infinite 3s ease-in-out infinite;
-    transform: translateY(20px) rotateX(70deg) rotateY(-15deg);
+  .character-image svg {
+    position: absolute;
+    top: 40vh;
+    left: 20vw;
   }
   
   .character-thumbnail {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
     position: absolute;
-    background-image: url("/placeholder.svg?height=60&width=60");
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--principal-color-dark);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
   }
   
-  .character-thumbnail.left {
-    left: 50px;
-    top: 50px;
+  .character-thumbnail.vector {
+    top: 2vh;
+    left: 2vw;
   }
   
-  .character-thumbnail.right {
-    right: 50px;
-    bottom: 100px;
+  .character-thumbnail.jake {
+    bottom: 1vh;
+    right: 0;
+  }
+
+  .character-thumbnail.hug {
+    bottom: 3vh;
+    left: 0;
+  }
+
+  .character-thumbnail::after {
+    content: '♥';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: pulse 1s infinite;
+  }
+
+  .character-thumbnail.jake::after {
+    animation-delay: .5s;
+  }
+
+  .character-thumbnail.hug::after {
+    animation-delay: 1s;
   }
   
   /* Selection Panel (Right) */
@@ -248,7 +279,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
   }
   
   .step {
@@ -263,6 +294,7 @@
   }
   
   .step-title {
+    display: inline-flex;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -271,23 +303,26 @@
   
   .platform-options {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
+    justify-content: space-between;
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50px;
   }
   
   .platform-btn {
-    padding: 8px 20px;
-    border-radius: 20px;
+    padding: 13px 19px;
+    border-radius: 30px;
     border: none;
-    background-color: #f0f0f0;
     color: #666;
+    background-color: transparent;
     font-size: 14px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all .3s linear;
   }
   
   .platform-btn.active {
-    background-color: #fff;
+    background-color: #f0f0f0;
     color: #333;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -320,6 +355,12 @@
   
   .teams-list {
     margin: 15px 0;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,  
+      rgba(0, 0, 0, 1) 70%,  
+      rgba(0, 0, 0, 0) 100%  
+    );
   }
   
   .team-item {
@@ -349,28 +390,23 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #f0f0f0;
     margin-left: -8px;
     border: 2px solid white;
-    background-image: url("/placeholder.svg?height=24&width=24");
-    background-size: cover;
   }
-  
-  .team-avatar:first-child {
-    margin-left: 0;
+
+  .team-avatar img {
+    width: 100%;
+    height: 100%;
   }
   
   .add-btn {
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+    border-radius: 25%;
     background-color: #f0f0f0;
     border: none;
     color: #666;
     font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     transition: all 0.2s ease;
   }
@@ -381,12 +417,13 @@
   
   .search-btn {
     width: 100%;
-    padding: 12px;
+    padding: 22px;
     border-radius: 10px;
     background-color: #222;
     color: white;
     border: none;
     font-weight: 600;
+    font-size: large;
     cursor: pointer;
     transition: all 0.2s ease;
     margin-top: 10px;
@@ -410,6 +447,19 @@
     100% {
       opacity: 0;
     }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+    
   }
   
   /* Responsive Adjustments */

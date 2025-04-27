@@ -1,0 +1,51 @@
+.round-button {
+    position: absolute;
+    top: 10vh;
+    right: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  .round-button i {
+    font-size: 1rem;
+  }
+
+  .pulse::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: .5;
+    animation: pulser 1.5s infinite;
+  }
+
+  .user-plus {
+    filter: invert(1);
+  }
+
+  @keyframes pulser {
+    0% {
+      opacity: 2;
+    }
+    50% {
+      scale: 1.3;
+      opacity: .5;
+    }
+  }
+  
+  

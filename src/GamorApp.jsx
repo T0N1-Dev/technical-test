@@ -1,5 +1,6 @@
 import MainBoard from "./components/MainBoard";
 import Navbar from "./components/Navbar";
+import TrendingCategories from "./components/TrendingCategories";
 import "./styles/main.css";
 
 function GamorApp() {
@@ -7,6 +8,7 @@ function GamorApp() {
     <main>
       <Navbar />
       <MainBoard />
+      <TrendingCategories />
     </main>
   );
 }
