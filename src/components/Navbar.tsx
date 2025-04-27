@@ -14,7 +14,7 @@ const Navbar = () => {
         <a href="#" className="nav-link hover-effect">
           Streams
           <svg className="streams-circle" width="80" height="80" viewBox="0 0 150 150">
-            <circle className="draw-circle" cx="75" cy="75" r="70"/>
+            <circle className="draw-circle" cx="85" cy="75" r="70"/>
           </svg>
         </a>
         <a href="#" className="nav-link hover-effect">
@@ -25,8 +25,8 @@ const Navbar = () => {
         </a>
         <a href="#" className="nav-link hover-effect">
           Premium
-          <svg className="premiun-circle" width="80" height="80" viewBox="0 0 150 150">
-            <circle className="draw-circle" cx="75" cy="75" r="70"/>
+          <svg className="premiun-circle" width="150" height="150" viewBox="0 0 250 250">
+            <circle className="draw-circle" cx="85" cy="75" r="70"/>
           </svg>
         </a>
       </div>

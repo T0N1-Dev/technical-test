@@ -1,0 +1,17 @@
+.countdown-timer {
+    background-color: white;
+    color: #333;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .separator {
+    margin: 0 10px;
+  }

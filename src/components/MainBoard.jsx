@@ -51,7 +51,10 @@ const MainBoard = () => {
           <h2 className="featured-title">Fortnite New Season</h2>
           <p className="featured-subtitle">Join Live Stream</p>
 
-          <Timer />
+          <div className="timer-center">
+            <Timer />
+            <RoundButton />
+          </div>
 
           <div className="character-container">
             <div className="character-image">
@@ -69,7 +72,6 @@ const MainBoard = () => {
               <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745707867/pngimg.com_-_fortnite_PNG19_igb5sa.png" alt="hug-img" />
             </div>
           </div>
-          <RoundButton />
         </div>
       </div>
 

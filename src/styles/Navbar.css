@@ -46,6 +46,7 @@
   }
 
   .nav-link {
+    position: relative;
     color: #666;
     text-decoration: none;
     margin: 0;
@@ -64,29 +65,11 @@
 
   .nav-link svg {
     position: absolute;
-    top: .6vw;
+    left: -1rem;
     cursor: default;
+    overflow: visible;
     pointer-events: none;
-  }
-
-  svg.home-circle {
-    left: var(--left-circle-hover);
-  }
-
-  svg.streams-circle {
-    left: calc(var(--left-circle-hover) + 4.5rem);
-  }
-
-  svg.party-circle {
-    left: calc(var(--left-circle-hover) + 9rem);
-  }
-
-  svg.premiun-circle {
-    left: calc(var(--left-circle-hover) + 13.3rem);
-  }
-
-  svg.signIn-circle {
-    right: calc(var(--left-circle-hover) + 10rem);
+    z-index: 2;
   }
 
   .draw-circle {
@@ -96,7 +79,7 @@
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
     transition: stroke-dashoffset .4s ease-in;
-    transform: translateY(20px) rotateX(60deg) rotateY(-10deg);
+    transform: rotateX(60deg) rotateY(-10deg);
   }
 
   .hover-effect:hover .draw-circle {
@@ -167,7 +150,7 @@
       margin: 0.5rem 0;
     }
 
-    svg {
+    .hover-effect svg {
       visibility: hidden;
     }
   }
