@@ -42,6 +42,8 @@
   
   .category-card.active {
     color: white;
+    background-size: cover;
+    background-position: center;
   }
   
   .category-header {
@@ -67,14 +69,6 @@
     margin: 0;
   }
   
-  .arrow-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-  }
-  
   /* Responsive adjustments */
   @media (max-width: 1024px) {
     .trending-grid {
@@ -97,12 +91,3 @@
       height: 120px;
     }
   }
-  
-  /* Special styling for the "Shooter Games" card which is active by default */
-  .category-card:nth-child(7).active {
-    background-image: url("/placeholder.svg?height=140&width=280");
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-  }
-  
