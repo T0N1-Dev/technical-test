@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import {RoundButton} from "./RoundButton"
 import "../styles/MainBoard.css"
 import { Timer } from "./Timer"

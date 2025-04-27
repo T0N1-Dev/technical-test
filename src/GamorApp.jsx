@@ -1,5 +1,6 @@
 import MainBoard from "./components/MainBoard";
 import Navbar from "./components/Navbar";
+import { ToggleButton } from "./components/ToggleButton";
 import TrendingCategories from "./components/TrendingCategories";
 import "./styles/main.css";
 
@@ -9,6 +10,9 @@ function GamorApp() {
       <Navbar />
       <MainBoard />
       <TrendingCategories />
+      <div className="testing">
+        <ToggleButton />
+      </div>
     </main>
   );
 }
