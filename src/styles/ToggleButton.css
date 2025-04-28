@@ -1,14 +1,24 @@
+.toogle-container * {
+  transition: all 0.3s ease-in-out;
+}
+
+.toogle-container {
+    position: fixed;
+    top: 10vh;
+    right: 1vw;
+}
+
 .toggle-check {
     display: none;
 }
 
 .display {
     width: 100px;
-    height: 100px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #f8f8f8;
 }
 
 .toggle-label {

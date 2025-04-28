@@ -2,7 +2,7 @@ import '../styles/ToggleButton.css';
 
 export const ToggleButton = () => {
   return (
-    <>
+    <div className="toogle-container">
         <input className='toggle-check' type="checkbox" id="toogle" />
 
         <div className="display">
@@ -17,6 +17,6 @@ export const ToggleButton = () => {
                 </div>
             </label>
         </div>
-    </>
+    </div>
   )
 }

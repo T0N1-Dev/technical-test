@@ -10,9 +10,7 @@ function GamorApp() {
       <Navbar />
       <MainBoard />
       <TrendingCategories />
-      <div className="testing">
-        <ToggleButton />
-      </div>
+      <ToggleButton />
     </main>
   );
 }
