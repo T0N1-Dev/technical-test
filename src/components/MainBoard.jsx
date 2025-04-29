@@ -2,9 +2,11 @@ import { useState } from "react"
 import {RoundButton} from "./RoundButton"
 import "../styles/MainBoard.css"
 import { Timer } from "./Timer"
+import { useDarkMode } from "../context/DarkModeContext"
 
 const MainBoard = () => {
   const [selectedPlatform, setSelectedPlatform] = useState("Party")
+  const { darkMode } = useDarkMode()
 
   const teams = [
     { id: 1, name: "Dr Team", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_2.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_3.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_18.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_19.png"] },
@@ -19,10 +21,10 @@ const MainBoard = () => {
       <div className="welcome-panel">
         <div className="welcome-content">
           <h1 className="welcome-title">
-            <span className="text-black">start</span>
-            <span className="text-orange">streaming</span>
-            <span className="text-black">games</span>
-            <span className="text-black">differently</span>
+            <span className="text-without-color">start</span>
+            <span className="text-with-color">streaming</span>
+            <span className="text-without-color">games</span>
+            <span className="text-without-color">differently</span>
           </h1>
           <p className="welcome-subtitle">
             gamor now has <span className="underlined">stream party</span> platform
@@ -57,11 +59,24 @@ const MainBoard = () => {
           </div>
 
           <div className="character-container">
-            <div className="character-image">
-              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
-                Tu navegador no soporta videos HTML5.
-              </video>
-            </div>
+            {
+              !darkMode ? (
+                <div className="character-image">
+                  <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
+                    Tu navegador no soporta videos HTML5.
+                  </video>
+                </div>
+              ) : (
+                <div 
+                  className="character-image-dark"
+                >
+                  <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745898302/0428_1_rb1af4.mp4" width={800} height={800} autoPlay muted loop>
+                    Tu navegador no soporta videos HTML5.
+                  </video>
+                </div>
+              )
+            }
+
             <div className="character-thumbnail vector">
               <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
             </div>

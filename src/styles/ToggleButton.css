@@ -4,8 +4,9 @@
 
 .toogle-container {
     position: fixed;
-    top: 10vh;
+    top: 12vh;
     right: 1vw;
+    z-index: 2;
 }
 
 .toggle-check {
@@ -18,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f8f8f8;
 }
 
 .toggle-label {
@@ -64,15 +64,15 @@
 }
 
 input[type=checkbox]:checked + .display label {
-    background: #1F1F21;
-    box-shadow: 2.5px 2.5px 7.5px rgba(0, 0, 0, 0.5) inset;
+    background: #f3f3f3;
+    box-shadow: 2.5px 2.5px 7.5px rgba(0, 0, 0, 0.);
 }
 input[type=checkbox]:checked + .display label .toggle-circle {
     left: 100%;
     transform: translate(-110%, -50%);
     background: #2C2C2F;
-    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5),
-    -2.5px -2.5px 7.5px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 2.5px 2.5px 5px rgba(255, 255, 255, 0.2),
+    -2.5px -2.5px 7.5px rgba(255, 255, 255, 0.2);
 }
 input[type=checkbox]:checked + .display label .toggle-circle .sun-icon {
     margin-top: 75%;
@@ -84,4 +84,10 @@ input[type=checkbox]:checked + .display label .toggle-circle .moon-icon {
 }
 label:active .toogle-circle {
     width: 50px;
+}
+
+@media (max-width: 1100px) {
+    .toogle-container {
+        top: 12vh;
+    }
 }

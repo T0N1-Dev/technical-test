@@ -33,12 +33,12 @@
     z-index: 1;
   }
   
-  .text-black {
+  .text-without-color {
     color: #222;
     display: block;
   }
   
-  .text-orange {
+  .text-with-color {
     color: var(--secondary-color);
     display: block;
   }
@@ -188,7 +188,8 @@
     justify-content: center;
   }
   
-  .character-image {
+  .character-image,
+  .character-image-dark {
     width: 220px;
     height: 300px;
     position: absolute;

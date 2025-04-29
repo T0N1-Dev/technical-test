@@ -1,10 +1,13 @@
 .trending-container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 5vh;
     padding: 2rem;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: white;
     color: #333;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);;
   }
   
   .trending-title {
@@ -31,13 +34,11 @@
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 1px solid #eaeaea;
     overflow: hidden;
   }
   
   .category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-.3rem);
   }
   
   .category-card.active {
