@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/Navbar.css";
 import { useModal } from "../context/ModalContext";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { openModal } = useModal();
+  const { user, isAuthenticated, logout } = useAuth();
 
   return (
     <nav className="navbar">
@@ -39,15 +41,23 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <a href="#" className="nav-link hover-effect" onClick={openModal}>
-          Sign in
-          <svg className="signIn-circle" width="80" height="80" viewBox="0 0 150 150">
-            <circle className="draw-circle" cx="75" cy="75" r="70"/>
-          </svg>
-        </a>
-        <a href="#" className="create-account-btn">
-          Create account
-        </a>
+        { isAuthenticated ? (
+          <a href="#" onClick={logout} className="logout-btn">Logout</a>
+          ) : (
+            <>
+              <a href="#" className="nav-link hover-effect" onClick={openModal}>
+                Sign in
+                <svg className="signIn-circle" width="80" height="80" viewBox="0 0 150 150">
+                  <circle className="draw-circle" cx="75" cy="75" r="70"/>
+                </svg>
+              </a>
+
+              <a href="#" className="create-account-btn">
+                Create account
+              </a>
+            </>
+          )
+        }
       </div>
     </nav>
   )
