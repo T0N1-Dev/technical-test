@@ -1,11 +1,11 @@
-import { useState } from "react"
+
 import {RoundButton} from "./RoundButton"
 import "../styles/MainBoard.css"
 import { Timer } from "./Timer"
 import { useDarkMode } from "../context/DarkModeContext"
+import { StepPlatforms } from "./StepPlatforms"
 
 const MainBoard = () => {
-  const [selectedPlatform, setSelectedPlatform] = useState("Party")
   const { darkMode } = useDarkMode()
 
   const teams = [
@@ -27,7 +27,7 @@ const MainBoard = () => {
             <span className="text-without-color">differently</span>
           </h1>
           <p className="welcome-subtitle">
-            gamor now has <span className="underlined">stream party</span> platform
+            gamor now has <span className="underlined" style={darkMode ? { color: "white" } : null}>stream party</span> platform
           </p>
           <div className="auth-buttons">
             <button className="btn-create">Create account</button>
@@ -59,23 +59,18 @@ const MainBoard = () => {
           </div>
 
           <div className="character-container">
-            {
-              !darkMode ? (
-                <div className="character-image">
-                  <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
-                    Tu navegador no soporta videos HTML5.
-                  </video>
-                </div>
-              ) : (
-                <div 
-                  className="character-image-dark"
-                >
-                  <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745898302/0428_1_rb1af4.mp4" width={800} height={800} autoPlay muted loop>
-                    Tu navegador no soporta videos HTML5.
-                  </video>
-                </div>
-              )
-            }
+            
+            <div className={`character-image ${darkMode && 'opacity-0 translate-x_n-100'}`}>
+              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
+                Tu navegador no soporta videos HTML5.
+              </video>
+            </div>
+              
+            <div className={`character-image-dark ${!darkMode && 'opacity-0 translate-x-100'}`} >
+              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745976583/373793745429110792_pdhrmq.mp4" width={800} height={800} autoPlay muted loop>
+                Tu navegador no soporta videos HTML5.
+              </video>
+            </div>
 
             <div className="character-thumbnail vector">
               <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
@@ -93,32 +88,8 @@ const MainBoard = () => {
       {/* Right Panel - Game Selection */}
       <div className="selection-panel">
         <div className="selection-content">
-          <div className="step">
-            <span className="step-number">01.</span>
-            <h3 className="step-title">Choose Platform</h3>
-
-            <div className="platform-options">
-              <button
-                className={`platform-btn ${selectedPlatform === "Party" ? "active" : ""}`}
-                onClick={() => setSelectedPlatform("Party")}
-              >
-                🎉 Party
-              </button>
-              <button
-                className={`platform-btn ${selectedPlatform === "Matchs" ? "active" : ""}`}
-                onClick={() => setSelectedPlatform("Matchs")}
-              >
-                ⚔️ Matchs
-              </button>
-              <button
-                className={`platform-btn ${selectedPlatform === "Streams" ? "active" : ""}`}
-                onClick={() => setSelectedPlatform("Streams")}
-              >
-                🎥 Streams
-              </button>
-            </div>
-          </div>
-
+          <StepPlatforms />
+          
           <div className="step">
             <span className="step-number">02.</span>
             <h3 className="step-title">Searching Game</h3>

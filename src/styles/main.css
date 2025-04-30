@@ -9,7 +9,7 @@
 :root {
   --principal-color: #8465f2;
   --principal-color-dark: #5e3bb0;
-  --secondary-color: #f67932;
+  --secondary-color: #fe7530;
   --left-circle-hover: .7vw;
 }
 
@@ -36,7 +36,7 @@ a {
 }
 
 body.dark-mode {
-  --principal-color: #f67932;
+  --principal-color: #fe7530;
   --principal-color-dark: #141414;
   --secondary-color: #8465f2;
   background-color: #121212;

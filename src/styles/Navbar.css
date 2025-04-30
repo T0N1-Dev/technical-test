@@ -101,6 +101,14 @@
     transform: scale(1.05) translateY(-2px);
   }
 
+  body.dark-mode .navbar-right a {
+    color: white;
+  }
+
+  body.dark-mode .navbar-right a:hover {
+    color: var(--principal-color);
+  } 
+
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .navbar {
