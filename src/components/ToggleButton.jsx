@@ -9,6 +9,7 @@ export const ToggleButton = () => {
             className='toggle-check' 
             type="checkbox" 
             id="toggle"
+            checked={darkMode}
             onChange={toggleDarkMode} 
         />
 

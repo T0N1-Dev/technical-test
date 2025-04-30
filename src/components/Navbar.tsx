@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Navbar.css";
+import { useModal } from "../context/ModalContext";
 
 const Navbar = () => {
+  const { openModal } = useModal();
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -36,7 +39,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <a href="/login" className="nav-link hover-effect">
+        <a href="#" className="nav-link hover-effect" onClick={openModal}>
           Sign in
           <svg className="signIn-circle" width="80" height="80" viewBox="0 0 150 150">
             <circle className="draw-circle" cx="75" cy="75" r="70"/>

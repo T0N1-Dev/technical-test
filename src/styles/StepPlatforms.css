@@ -1,0 +1,57 @@
+.step {
+  margin-bottom: 20px;
+}
+  
+.step-number {
+  font-size: 20px;
+  color: #999;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.step-title {
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.platform-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.platform-btn {
+  padding: 13px 19px;
+  border-radius: 30px;
+  border: none;
+  color: #666;
+  background-color: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.platform-btn.active {
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  
+body.dark-mode .step-title,
+body.dark-mode .game-name {
+  color: white;
+}
+
+body.dark-mode .platform-btn {
+  color: rgba(255, 255, 255, 0.7);
+
+  :hover {
+    color: white;
+  }
+}

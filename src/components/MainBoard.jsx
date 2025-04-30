@@ -4,16 +4,12 @@ import "../styles/MainBoard.css"
 import { Timer } from "./Timer"
 import { useDarkMode } from "../context/DarkModeContext"
 import { StepPlatforms } from "./StepPlatforms"
+import { teamsGroups } from "../data/teamsGroups"
+import { useModal } from "../context/ModalContext"
 
 const MainBoard = () => {
   const { darkMode } = useDarkMode()
-
-  const teams = [
-    { id: 1, name: "Dr Team", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_2.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_3.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_18.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_19.png"] },
-    { id: 2, name: "Mia Plays", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_4.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_5.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_21.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_24.png"] },
-    { id: 3, name: "Keoxer", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_7.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_9.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_23.png"] },
-    { id: 4, name: "Nicknemo", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_15.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_12.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"] },
-  ]
+  const { openModal } = useModal();
 
   return (
     <div className="main-board">
@@ -31,7 +27,7 @@ const MainBoard = () => {
           </p>
           <div className="auth-buttons">
             <button className="btn-create">Create account</button>
-            <button className="btn-signin">Sign in</button>
+            <button className="btn-signin" onClick={openModal}>Sign in</button>
           </div>
           <div className="decorative-lines">
             <svg width="250" height="250" viewBox="0 0 150 150">
@@ -60,14 +56,14 @@ const MainBoard = () => {
 
           <div className="character-container">
             
-            <div className={`character-image ${darkMode && 'opacity-0 translate-x_n-100'}`}>
+            <div className={`character-image ${darkMode && 'opacity-0'}`}>
               <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745619479/Untitled_design_3_oo3v9s.mp4" width={800} height={800} autoPlay muted loop>
                 Tu navegador no soporta videos HTML5.
               </video>
             </div>
               
-            <div className={`character-image-dark ${!darkMode && 'opacity-0 translate-x-100'}`} >
-              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1745976583/373793745429110792_pdhrmq.mp4" width={800} height={800} autoPlay muted loop>
+            <div className={`character-image-dark ${!darkMode && 'opacity-0'}`} >
+              <video src="https://res.cloudinary.com/dmfs1od9n/video/upload/v1746031307/374016664642080777_sgrrvu.mp4" width={800} height={800} autoPlay muted loop>
                 Tu navegador no soporta videos HTML5.
               </video>
             </div>
@@ -101,7 +97,7 @@ const MainBoard = () => {
               </div>
 
               <div className="teams-list">
-                {teams.map((team) => (
+                {teamsGroups.map((team) => (
                   <div key={team.id} className="team-item">
                     <span className="team-number">{team.id}</span>
                     <span className="team-name">{team.name}</span>

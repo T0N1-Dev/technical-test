@@ -1,0 +1,6 @@
+export const teamsGroups = [
+    { id: 1, name: "Dr Team", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_2.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_3.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_18.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_19.png"] },
+    { id: 2, name: "Mia Plays", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_4.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_5.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_21.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_24.png"] },
+    { id: 3, name: "Keoxer", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_7.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_9.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_23.png"] },
+    { id: 4, name: "Nicknemo", members: ["https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_15.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_12.png", "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"] },
+]

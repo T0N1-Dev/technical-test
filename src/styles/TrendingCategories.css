@@ -70,7 +70,7 @@
     font-weight: 600;
     margin: 0;
   }
-  
+
   /* Responsive adjustments */
   @media (max-width: 1024px) {
     .trending-grid {
