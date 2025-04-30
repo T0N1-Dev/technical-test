@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "../styles/TrendingCategories.css";
-import { useDarkMode } from "../context/DarkModeContext";
-import { categoriesGames } from "../data/categoriesGames";
+import { useDarkMode } from "../../context/DarkModeContext";
+import { categoriesGames } from "../../data/categoriesGames";
+import "../../styles/Trending/TrendingCategories.css";
 
 export default function TrendingCategories() {
   const [activeCategory, setActiveCategory] = useState("07")

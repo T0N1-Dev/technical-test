@@ -1,8 +1,8 @@
-import MainBoard from "./components/MainBoard";
-import ModalLogin from "./components/ModalLogin";
-import Navbar from "./components/Navbar";
-import { ToggleButton } from "./components/ToggleButton";
-import TrendingCategories from "./components/TrendingCategories";
+import MainBoard from "./components/Main/MainBoard";
+import ModalLogin from "./components/Generals/ModalLogin";
+import Navbar from "./components/Navbar/Navbar";
+import { ToggleButton } from "./components/Generals/ToggleButton";
+import TrendingCategories from "./components/Trending/TrendingCategories";
 import { AuthProvider } from "./context/AuthContext";
 import { DarkModeProvider } from "./context/DarkModeContext";
 import { ModalProvider } from "./context/ModalContext";

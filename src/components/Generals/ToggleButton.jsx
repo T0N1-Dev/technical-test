@@ -1,5 +1,5 @@
-import { useDarkMode } from '../context/DarkModeContext'
-import '../styles/ToggleButton.css';
+import { useDarkMode } from '../../context/DarkModeContext'
+import '../../styles/Generals/ToggleButton.css';
 
 export const ToggleButton = () => {
     const { darkMode, toggleDarkMode } = useDarkMode();

@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/Navbar.css";
-import { useModal } from "../context/ModalContext";
-import { useAuth } from "../context/AuthContext";
+import { useModal } from "../../context/ModalContext";
+import { useAuth } from "../../context/AuthContext";
+import "../../styles/Navbar/Navbar.css";
 
 const Navbar = () => {
   const { openModal } = useModal();

@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { useModal } from "../context/ModalContext"
-import "../styles/ModalLogin.css"
-import { useAuth } from "../context/AuthContext";
+import { useModal } from "../../context/ModalContext"
+import { useAuth } from "../../context/AuthContext";
+import "../../styles/Generals/ModalLogin.css"
 
 const ModalLogin = () => {
   const { isModalOpen, closeModal } = useModal();
