@@ -6,10 +6,14 @@ import { useDarkMode } from "../context/DarkModeContext"
 import { StepPlatforms } from "./StepPlatforms"
 import { teamsGroups } from "../data/teamsGroups"
 import { useModal } from "../context/ModalContext"
+import { useAuth } from "../context/AuthContext"
+import { useState } from "react"
 
 const MainBoard = () => {
   const { darkMode } = useDarkMode()
   const { openModal } = useModal();
+  const { isAuthenticated } = useAuth();
+  const [joined, setjoined] = useState(false);
 
   return (
     <div className="main-board">
@@ -25,9 +29,10 @@ const MainBoard = () => {
           <p className="welcome-subtitle">
             gamor now has <span className="underlined" style={darkMode ? { color: "white" } : null}>stream party</span> platform
           </p>
+          {}
           <div className="auth-buttons">
-            <button className="btn-create">Create account</button>
-            <button className="btn-signin" onClick={openModal}>Sign in</button>
+            <button className={`btn-create ${isAuthenticated && 'disabled'}`}>Create account</button>
+            <button className={`btn-signin ${isAuthenticated && 'disabled'}`} onClick={openModal}>Sign in</button>
           </div>
           <div className="decorative-lines">
             <svg width="250" height="250" viewBox="0 0 150 150">
@@ -51,7 +56,7 @@ const MainBoard = () => {
 
           <div className="timer-center">
             <Timer />
-            <RoundButton />
+            <RoundButton onClick={isAuthenticated ? setjoined : openModal}/>
           </div>
 
           <div className="character-container">
@@ -69,14 +74,21 @@ const MainBoard = () => {
             </div>
 
             <div className="character-thumbnail vector">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
             </div>
             <div className="character-thumbnail jake">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745706298/pngfind.com-fortnite-skin-png-288383_xd60p9.png" alt="jake-img" />
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745706298/pngfind.com-fortnite-skin-png-288383_xd60p9.png" alt="jake-img" />
             </div>
             <div className="character-thumbnail hug">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/v1745707867/pngimg.com_-_fortnite_PNG19_igb5sa.png" alt="hug-img" />
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745707867/pngimg.com_-_fortnite_PNG19_igb5sa.png" alt="hug-img" />
             </div>
+            {
+              isAuthenticated && joined && (
+                <div className="character-thumbnail user-avatar">
+                  <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1746040796/9e403ca851793c2b81a37bb383c3885d_pqakzf.png" alt="user-img" />
+                </div>
+              )
+            }
           </div>
         </div>
       </div>

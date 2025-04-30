@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { openModal } = useModal();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <nav className="navbar">
