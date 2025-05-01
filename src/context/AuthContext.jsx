@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   });
 
   const login = (email) => {
-    const fakeUser = { email, backgroundColor: '#0ACDFF', imageUrl: 'https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_24.png' };
+    const fakeUser = {id: crypto.randomUUID(), email, backgroundColor: '#0ACDFF', imageUrl: 'https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_24.png' };
     setUser(fakeUser);
     localStorage.setItem("authUser", JSON.stringify(fakeUser));
   };

@@ -45,7 +45,7 @@ a {
   text-decoration: none;
 }
 
-/* To hide and animate some elements */
+/* To hide, block and animate some elements */
 .opacity-0 {
   opacity: 0;
 }
@@ -53,6 +53,15 @@ a {
 .disabled {
   opacity: 0;
   visibility: hidden;
+}
+
+.btn-blocked {
+  opacity: .5;
+  cursor: default;
+}
+
+.btn-blocked:hover {
+  background-color: #f0f0f0;;
 }
 
 /* Dark Mode */
