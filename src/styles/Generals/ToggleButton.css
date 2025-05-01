@@ -1,8 +1,8 @@
-.toogle-container * {
+.toggle-container * {
   transition: all 0.3s ease-in-out;
 }
 
-.toogle-container {
+.toggle-container {
     position: fixed;
     top: 12vh;
     right: 1vw;
@@ -86,8 +86,31 @@ label:active .toogle-circle {
     width: 50px;
 }
 
-@media (max-width: 1100px) {
-    .toogle-container {
+@media (max-width: 600px) {
+    .toggle-container {
         top: 12vh;
     }
+
+    .display {
+        width: 80px;
+    }
+
+    .toggle-label {
+        width: 80px;
+        height: 40px;
+    }
+
+    .toggle-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sun-icon {
+        transform: translateX(18px);
+    }
+
+    .moon-icon {
+        transform: translateX(-12px);
+    }
+
 }

@@ -72,3 +72,9 @@ body.dark-mode {
   background-color: #121212;
   color: var(--dark-text-color);
 }
+
+@media (max-width: 450px) {
+  body {
+    width: 115vw;
+  }
+}

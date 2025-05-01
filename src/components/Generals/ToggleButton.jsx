@@ -4,7 +4,7 @@ import '../../styles/Generals/ToggleButton.css';
 export const ToggleButton = () => {
     const { darkMode, toggleDarkMode } = useDarkMode();
   return (
-    <div className="toogle-container">
+    <div className="toggle-container">
         <input 
             className='toggle-check' 
             type="checkbox" 
