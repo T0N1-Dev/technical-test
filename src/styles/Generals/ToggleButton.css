@@ -35,7 +35,7 @@
     width: 40px;
     height: 40px;
     border-radius: 99px;
-    background: white;
+    background: var(--dark-text-color);
     box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.05),
     -2.5px -2.5px 7.5px rgba(0, 0, 0, 0.05) inset;
     position: absolute;
@@ -57,7 +57,7 @@
 
 .moon-icon {
     margin-top: -75%;
-    color: white;
+    color: var(--dark-text-color);
     opacity: 0;
     overflow: visible;
     transform: translateX(-15px);

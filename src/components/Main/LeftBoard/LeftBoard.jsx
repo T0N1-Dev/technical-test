@@ -21,7 +21,7 @@ export const LeftBoard = () => {
                     gamor now has{' '}
                     <span
                         className="underlined"
-                        style={darkMode ? { color: 'white' } : null}
+                        style={darkMode ? { color: 'var(--dark-text-color)' } : null}
                     >
                         stream party
                     </span>{' '}

@@ -14,6 +14,7 @@
   --dark-principal-color: #1e1e1e;
   --dark-secondary-color: #2c2c2c;
   --dark-color-btn: #333;
+  --dark-color-btn-hover: #444;
   --dark-text-color: white;
   --left-circle-hover: .7vw;
 }
@@ -32,7 +33,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background-color: #f9f9f9;
-  color: #333;
+  color: var(--dark-color-btn);
 }
 
 body::-webkit-scrollbar {
@@ -60,5 +61,5 @@ body.dark-mode {
   --principal-color-darker: #1e1e1e;
   --secondary-color: #8465f2;
   background-color: #121212;
-  color: white;
+  color: var(--dark-text-color);
 }

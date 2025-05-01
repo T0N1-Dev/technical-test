@@ -1,7 +1,7 @@
 /* Button styles */
 .login-button {
   background-color: var(--principal-color);
-  color: white;
+  color: var(--dark-text-color);
   border: none;
   border-radius: 6px;
   padding: 12px 24px;
@@ -40,7 +40,7 @@
 
 /* Modal content */
 .modal-content {
-  background-color: white;
+  background-color: var(--dark-text-color);
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
@@ -60,7 +60,7 @@
 
 .modal-header h2 {
   font-size: 24px;
-  color: #333;
+  color: var(--dark-color-btn);
   font-weight: 600;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .close-button:hover {
-  color: #333;
+  color: var(--dark-color-btn);
   background-color: #f5f5f5;
 }
 
@@ -154,7 +154,7 @@
   width: 100%;
   padding: 14px;
   background-color: var(--principal-color);
-  color: white;
+  color: var(--dark-text-color);
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -250,8 +250,8 @@
   justify-content: center;
   width: 100%;
   padding: 12px;
-  background-color: white;
-  color: #444;
+  background-color: var(--dark-text-color);
+  color: var(--dark-color-btn-hover);
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
@@ -310,12 +310,12 @@
 
 /* Dark Mode Styles */
 body.dark-mode .modal-content {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--dark-principal-color);
+  color: var(--dark-text-color);
 }
 
 body.dark-mode .modal-header {
-  border-bottom-color: #333;
+  border-bottom-color: var(--dark-color-btn);
 }
 
 body.dark-mode .modal-header h2 {
@@ -328,7 +328,7 @@ body.dark-mode .close-button {
 
 body.dark-mode .close-button:hover {
   color: #fff;
-  background-color: #333;
+  background-color: var(--dark-color-btn);
 }
 
 body.dark-mode .form-group label {
@@ -337,7 +337,7 @@ body.dark-mode .form-group label {
 
 body.dark-mode .form-group input {
   background-color: #2d2d2d;
-  border-color: #444;
+  border-color: var(--dark-color-btn-hover);
   color: #fff;
 }
 
@@ -366,7 +366,7 @@ body.dark-mode .modal-overlay {
 /* Dark mode social login */
 body.dark-mode .divider::before,
 body.dark-mode .divider::after {
-  border-bottom-color: #444;
+  border-bottom-color: var(--dark-color-btn-hover);
 }
 
 body.dark-mode .divider span {
@@ -376,10 +376,10 @@ body.dark-mode .divider span {
 body.dark-mode .google-login-button {
   background-color: #2d2d2d;
   color: #fff;
-  border-color: #444;
+  border-color: var(--dark-color-btn-hover);
 }
 
 body.dark-mode .google-login-button:hover {
-  background-color: #333;
+  background-color: var(--dark-color-btn);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

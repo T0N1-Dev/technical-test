@@ -12,30 +12,30 @@
  
 /* Dark Mode */
 body.dark-mode .main-board {
-  background-color: #1e1e1e;
+  background-color: var(--dark-principal-color);
   box-shadow: 0 10px 30px rgba(0, 0, 0, .7);
 }
 
 body.dark-mode .welcome-panel,
 body.dark-mode .selection-panel {
-  background-color: #1e1e1e;
+  background-color: var(--dark-principal-color);;
 }
 
 body.dark-mode .game-search {
-  background-color: #2c2c2c;
+  background-color: var(--dark-secondary-color);;
 }
 
 body.dark-mode .platform-options {
-  background-color: #2c2c2c;
+  background-color: var(--dark-secondary-color);
 }
 
 body.dark-mode .platform-btn.active {
-  background-color: #333;
-  color: white;
+  background-color: var(--dark-color-btn);
+  color: var(--dark-text-color);
 }
 
 body.dark-mode .text-without-color {
-  color: white;
+  color: var(--dark-text-color);
 }
 
 body.dark-mode .underlined::after {
@@ -44,17 +44,17 @@ body.dark-mode .underlined::after {
 
 body.dark-mode .btn-create,
 body.dark-mode .btn-signin {
-  background-color: #2c2c2c;
-  color: white;
-  border: 1px solid #444;
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-text-color);
+  border: 1px solid var(--dark-color-btn-hover);
 }
 
 body.dark-mode .search-btn {
-  background-color: #333;
+  background-color: var(--dark-color-btn);
 }
 
 body.dark-mode .search-btn:hover {
-  background-color: #444;
+  background-color: var(--dark-color-btn-hover);
 }
 
 /* Responsive Adjustments */

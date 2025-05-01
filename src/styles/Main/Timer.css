@@ -1,6 +1,6 @@
 .countdown-timer {
-    background-color: white;
-    color: #333;
+    background-color: var(--dark-text-color);
+    color: var(--dark-color-btn);
     border-radius: 30px;
     padding: 10px 30px;
     font-size: 24px;

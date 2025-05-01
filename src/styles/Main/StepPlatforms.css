@@ -14,14 +14,14 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #444;
+  color: var(--dark-color-btn-hover);
 }
 
 .platform-options {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
-  background-color: white;
+  background-color: var(--dark-text-color);
   padding: 5px;
   border-radius: 50px;
 }
@@ -39,19 +39,19 @@
 
 .platform-btn.active {
   background-color: #f0f0f0;
-  color: #333;
+  color: var(--dark-color-btn);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
   
 body.dark-mode .step-title,
 body.dark-mode .game-name {
-  color: white;
+  color: var(--dark-text-color);
 }
 
 body.dark-mode .platform-btn {
   color: rgba(255, 255, 255, 0.7);
 
   :hover {
-    color: white;
+    color: var(--dark-text-color);
   }
 }
