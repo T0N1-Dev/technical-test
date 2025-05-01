@@ -3,7 +3,7 @@ import { useModal } from "../../context/ModalContext";
 import { useAuth } from "../../context/AuthContext";
 import "../../styles/Navbar/Navbar.css";
 
-const Navbar = () => {
+export const Navbar = () => {
   const { openModal } = useModal();
   const { isAuthenticated, logout } = useAuth();
 
@@ -61,6 +61,4 @@ const Navbar = () => {
       </div>
     </nav>
   )
-}
-
-export default Navbar
+};

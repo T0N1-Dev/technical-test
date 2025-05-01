@@ -3,7 +3,7 @@ import { useAuth } from "../../../context/AuthContext";
 import { useDarkMode } from "../../../context/DarkModeContext";
 import { useModal } from "../../../context/ModalContext";
 import { Timer } from "./Timer";
-import { RoundButton } from "../../Generals/RoundButton";
+import { RoundButton } from "./RoundButton";
 import "../../../styles/Main/CenterBoard/CenterBoard.css";
 
 export const CenterBoard = () => {

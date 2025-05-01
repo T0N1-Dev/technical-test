@@ -3,7 +3,7 @@ import { useModal } from "../../context/ModalContext"
 import { useAuth } from "../../context/AuthContext";
 import "../../styles/Generals/ModalLogin.css"
 
-const ModalLogin = () => {
+export const ModalLogin = () => {
   const { isModalOpen, closeModal } = useModal();
   const { login } = useAuth();
   const [email, setEmail] = useState("");
@@ -160,5 +160,3 @@ const ModalLogin = () => {
     </div>
   )
 }
-
-export default ModalLogin

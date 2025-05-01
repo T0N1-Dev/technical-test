@@ -3,7 +3,7 @@ import { useDarkMode } from "../../context/DarkModeContext";
 import { categoriesGames } from "../../data/categoriesGames";
 import "../../styles/Trending/TrendingCategories.css";
 
-export default function TrendingCategories() {
+export const TrendingCategories = () => {
   const [activeCategory, setActiveCategory] = useState("07")
   const { darkMode } = useDarkMode();
   const categories = categoriesGames;

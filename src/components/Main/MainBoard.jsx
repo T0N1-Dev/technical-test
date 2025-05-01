@@ -4,7 +4,7 @@ import { CenterBoard } from "./CenterBoard/CenterBoard";
 import { RightBoard } from "./RightBoard/RightBoard";
 import "../../styles/Main/MainBoard.css";
 
-const MainBoard = () => {
+export const MainBoard = () => {
 
   return (
     <div className="main-board">
@@ -18,6 +18,4 @@ const MainBoard = () => {
       <RightBoard />
     </div>
   )
-}
-
-export default MainBoard
+};

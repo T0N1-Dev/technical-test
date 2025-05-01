@@ -1,4 +1,4 @@
-import '../../styles/Generals/RoundButton.css';
+import '../../../styles/Generals/RoundButton.css';
 
 export const RoundButton = ({onClick}) => {
   return (
