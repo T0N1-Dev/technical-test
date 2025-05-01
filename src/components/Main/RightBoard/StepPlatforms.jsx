@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../../styles/Main/StepPlatforms.css';
+import '../../../styles/Main/RightBoard/StepPlatforms.css';
 
 
 export const StepPlatforms = () => {

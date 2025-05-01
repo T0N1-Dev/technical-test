@@ -1,8 +1,24 @@
+import { useAuth } from "../../../context/AuthContext";
+import { useModal } from "../../../context/ModalContext";
 import { teamsGroups } from "../../../data/teamsGroups";
+import { addAvatarList } from "../../../helper/addAvatarList";
+import { StepPlatforms } from "./StepPlatforms";
 import "../../../styles/Main/RightBoard/RightBoard.css";
-import { StepPlatforms } from "../StepPlatforms";
+import { useState } from "react";
 
 export const RightBoard = () => {
+
+    const { user, isAuthenticated } = useAuth();
+    const { openModal } = useModal();
+    const { backgroundColor, imageUrl } = user || {};
+
+    const [teams, setTeams] = useState(teamsGroups);
+
+    const handleAdd = (id) => {
+        const updatedTeams = addAvatarList(id, {backgroundColor, imageUrl}, teams);
+        setTeams(updatedTeams);
+    };
+
     return (
         <div className="selection-panel">
             <div className="selection-content">
@@ -19,26 +35,29 @@ export const RightBoard = () => {
                         </div>
 
                         <div className="teams-list">
-                            {teamsGroups.map((team) => (
-                                <div key={team.id} className="team-item">
-                                    <span className="team-number">{team.id}</span>
-                                    <span className="team-name">{team.name}</span>
+                            {teams.map(({ id, name, members}) => (
+                                <div key={id} className="team-item">
+                                    <span className="team-number">{id}</span>
+                                    <span className="team-name">{name}</span>
                                     <div className="team-avatars">
-                                        {team.members.map((avatar, index) => (
+                                        {members.map((avatar, index) => (
                                             <div
                                                 key={index}
                                                 className="team-avatar"
-                                                style={{
-                                                    backgroundColor: `#${Math.floor(
-                                                        Math.random() * 16777215
-                                                    ).toString(16)}`,
-                                                }}
+                                                style={{ backgroundColor: avatar.backgroundColor }}
                                             >
-                                                <img src={`${avatar}`} alt={`avatar-${index}`} />
+                                                <img src={`${avatar.imageUrl}`} alt={`avatar-${index}`} />
                                             </div>
                                         ))}
                                     </div>
-                                    <button className="add-btn">+</button>
+                                    <button 
+                                        className="add-btn" 
+                                        onClick={() => 
+                                            isAuthenticated ? handleAdd(id) : openModal() 
+                                        }
+                                    >
+                                        +
+                                    </button>
                                 </div>
                             ))}
                         </div>

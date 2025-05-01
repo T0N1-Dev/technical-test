@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuth } from "../../../context/AuthContext";
 import { useDarkMode } from "../../../context/DarkModeContext";
 import { useModal } from "../../../context/ModalContext";
-import { Timer } from "../Timer";
+import { Timer } from "./Timer";
 import { RoundButton } from "../../Generals/RoundButton";
 import "../../../styles/Main/CenterBoard/CenterBoard.css";
 

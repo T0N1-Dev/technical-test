@@ -1,8 +1,8 @@
 
 import { LeftBoard } from "./LeftBoard/LeftBoard";
-import "../../styles/Main/MainBoard.css"
 import { CenterBoard } from "./CenterBoard/CenterBoard";
 import { RightBoard } from "./RightBoard/RightBoard";
+import "../../styles/Main/MainBoard.css";
 
 const MainBoard = () => {
 
