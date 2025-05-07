@@ -11,6 +11,7 @@ export const CenterBoard = () => {
     const { openModal } = useModal();
     const { isAuthenticated } = useAuth();
     const [joined, setjoined] = useState(false);
+    const [liked, setLiked] = useState(false);
 
   return (
     <div className="featured-panel">
@@ -37,14 +38,14 @@ export const CenterBoard = () => {
               </video>
             </div>
 
-            <div className="character-thumbnail vector">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
+            <div className={`character-thumbnail vector ${liked && 'liked'}`} onDoubleClick={setLiked}>
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto,w_300/v1745706295/pngfind.com-fortnite-skin-png-967121_pj7ack.png" alt="vector-image" />
             </div>
             <div className="character-thumbnail jake">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745706298/pngfind.com-fortnite-skin-png-288383_xd60p9.png" alt="jake-img" />
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto,w_300/v1745706298/pngfind.com-fortnite-skin-png-288383_xd60p9.png" alt="jake-img" />
             </div>
             <div className="character-thumbnail hug">
-              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1745707867/pngimg.com_-_fortnite_PNG19_igb5sa.png" alt="hug-img" />
+              <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto,w_300/v1746629081/pngimg.com_-_fortnite_PNG19_zixhb9.png" alt="hug-img" />
             </div>
             {
               isAuthenticated && joined && (

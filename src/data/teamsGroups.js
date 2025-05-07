@@ -35,4 +35,22 @@ export const teamsGroups = [
             { id: 12, backgroundColor: "#150578", imageUrl: "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png" }
         ] 
     },
+    { 
+        id: 5, 
+        name: "Fighters", 
+        members: [
+            { id: 13, backgroundColor: "#A61C3C", imageUrl: "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_35.png" },
+            { id: 14, backgroundColor: "#02394A", imageUrl: "	https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_34.png" },
+            { id: 15, backgroundColor: "#F26DF9", imageUrl: "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_33.png" }
+        ] 
+    },
+    { 
+        id: 6, 
+        name: "Shooterats", 
+        members: [
+            { id: 16, backgroundColor: "#F4AC45", imageUrl: "	https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_32.png" },
+            { id: 17, backgroundColor: "#694A38", imageUrl: "https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_31.png" },
+            { id: 18, backgroundColor: "#92BFB1", imageUrl: "	https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_30.png" }
+        ] 
+    }
 ];

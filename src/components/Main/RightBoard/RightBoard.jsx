@@ -3,9 +3,10 @@ import { useModal } from "../../../context/ModalContext";
 import { teamsGroups } from "../../../data/teamsGroups";
 import { addAvatarList } from "../../../helper/addAvatarList";
 import { StepPlatforms } from "./StepPlatforms";
-import "../../../styles/Main/RightBoard/RightBoard.css";
 import { useState } from "react";
 import { removeAvatarList } from "../../../helper/removeAvatrList";
+import "../../../styles/Main/RightBoard/RightBoard.css";
+
 
 export const RightBoard = () => {
 
