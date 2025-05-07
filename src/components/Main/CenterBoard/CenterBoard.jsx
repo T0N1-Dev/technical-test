@@ -50,7 +50,7 @@ export const CenterBoard = () => {
             {
               isAuthenticated && joined && (
                 <div className="character-thumbnail user-avatar">
-                  <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto/v1746040796/9e403ca851793c2b81a37bb383c3885d_pqakzf.png" alt="user-img" />
+                  <img src="https://res.cloudinary.com/dmfs1od9n/image/upload/f_webp,q_auto,w_300/v1746040796/9e403ca851793c2b81a37bb383c3885d_pqakzf.png" alt="user-img" />
                 </div>
               )
             }
