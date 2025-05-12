@@ -62,20 +62,23 @@
     overflow: visible;
     transform: translateX(-15px);
 }
-
+/* 
+input[type=checkbox]:checked + .display {
+    background: #2C2C2F;
+} */
 input[type=checkbox]:checked + .display label {
-    background: #f3f3f3;
-    box-shadow: 2.5px 2.5px 7.5px rgba(0, 0, 0, 0.);
+    background: #1F1F21;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
 }
 input[type=checkbox]:checked + .display label .toggle-circle {
     left: 100%;
     transform: translate(-110%, -50%);
     background: #2C2C2F;
-    box-shadow: 2.5px 2.5px 5px rgba(255, 255, 255, 0.2),
-    -2.5px -2.5px 7.5px rgba(255, 255, 255, 0.2);
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.5),
+    -2.5px -2.5px 7.5px rgba(0, 0, 0, 0.5) inset;
 }
 input[type=checkbox]:checked + .display label .toggle-circle .sun-icon {
-    margin-top: 75%;
+    margin-top: 150%;
     opacity: 0;
 }
 input[type=checkbox]:checked + .display label .toggle-circle .moon-icon {
